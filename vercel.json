@@ -6,8 +6,12 @@
       "destination": "https://penguinmod-packager.vercel.app/"
     },
     {
-      "source": "/PenguinMod-Packager/:path*",
-      "destination": "https://penguinmod-packager.vercel.app/:path*"
+      "source": "/PenguinMod-Packager/",
+      "destination": "https://penguinmod-packager.vercel.app/"
+    },
+    {
+      "source": "/PenguinMod-Packager/:path+",
+      "destination": "https://penguinmod-packager.vercel.app/:path+"
     }
   ]
 }
