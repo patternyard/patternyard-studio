@@ -1,0 +1,54 @@
+# wycats fork: build the editor exactly like upstream (Node 16 + pnpm6,
+# shamefully-hoisted) and deploy the prebuilt static output to Vercel.
+# The fragile webpack-4 build runs on a controlled Node 16 here, so it does
+# not depend on Vercel's build-time Node version.
+name: Deploy editor to Vercel
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["wycats-main"]
+
+concurrency:
+  group: "deploy-vercel"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      # Our self-hosted service roots (see src/lib/pm-config.js). Unset ones
+      # fall back to PenguinMod defaults.
+      PM_API_ROOT: ${{ vars.PM_API_ROOT }}
+      PM_EXTENSIONS_ROOT: ${{ vars.PM_EXTENSIONS_ROOT }}
+      PM_DOCS_ROOT: ${{ vars.PM_DOCS_ROOT }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js 16
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies (pnpm6, shamefully hoisted)
+        run: npm i -g pnpm@v6 && pnpm i --shamefully-hoist --force
+
+      - name: Build editor
+        run: NODE_ENV="production" ./node_modules/.bin/webpack --bail
+
+      - name: Assemble Vercel Build Output (static)
+        run: |
+          mkdir -p .vercel/output/static
+          cp -r build/* .vercel/output/static/
+          printf '{ "version": 3 }' > .vercel/output/config.json
+
+      - name: Deploy prebuilt output to Vercel
+        run: |
+          npm i -g vercel@latest
+          vercel deploy --prebuilt --prod \
+            --token "$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
