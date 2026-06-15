@@ -2,6 +2,14 @@
 # shamefully-hoisted) and deploy the prebuilt static output to Vercel.
 # The fragile webpack-4 build runs on a controlled Node 16 here, so it does
 # not depend on Vercel's build-time Node version.
+#
+# Service roots come from the committed .env (loaded by dotenv in
+# webpack.config.js); PM_API_ROOT there points at our backend. Override by
+# editing .env, not here.
+#
+# The only secret you must add to this repo is VERCEL_TOKEN (Settings ->
+# Secrets and variables -> Actions). VERCEL_ORG_ID / VERCEL_PROJECT_ID are
+# non-sensitive identifiers, inlined below.
 name: Deploy editor to Vercel
 
 on:
@@ -13,15 +21,13 @@ concurrency:
   group: "deploy-vercel"
   cancel-in-progress: true
 
+env:
+  VERCEL_ORG_ID: "team_1A5hxCsAnX5KFLm69oklRZWB"
+  VERCEL_PROJECT_ID: "prj_ORYYVAiXDxbVbIOo1wMmyYJhWgLJ"
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      # Our self-hosted service roots (see src/lib/pm-config.js). Unset ones
-      # fall back to PenguinMod defaults.
-      PM_API_ROOT: ${{ vars.PM_API_ROOT }}
-      PM_EXTENSIONS_ROOT: ${{ vars.PM_EXTENSIONS_ROOT }}
-      PM_DOCS_ROOT: ${{ vars.PM_DOCS_ROOT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,9 +52,6 @@ jobs:
       - name: Deploy prebuilt output to Vercel
         run: |
           npm i -g vercel@latest
-          vercel deploy --prebuilt --prod \
-            --token "$VERCEL_TOKEN"
+          vercel deploy --prebuilt --prod --token "$VERCEL_TOKEN"
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
