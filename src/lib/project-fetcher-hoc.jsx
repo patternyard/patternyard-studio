@@ -26,6 +26,8 @@ import { MISSING_PROJECT_ID } from "./tw-missing-project";
 import VM from "scratch-vm";
 import * as progressMonitor from "../components/loader/tw-progress-monitor";
 
+import {PM_API_ROOT, PM_ASSET_CDN_ROOT} from './pm-config';
+
 /* Higher Order Component to provide behavior for loading projects by id. If
  * there's no id, the default project is loaded.
  * @param {React.Component} WrappedComponent component to receive projectData prop
@@ -235,9 +237,9 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     };
     ProjectFetcherComponent.defaultProps = {
         assetHost:
-            "https://asset-cdn.penguinmod.com/file/penguinmod-warm-tier-s2-cf",
+            `${PM_ASSET_CDN_ROOT}/file/penguinmod-warm-tier-s2-cf`,
         projectHost:
-            "https://projects.penguinmod.com/api/v1/projects/getProject?requestType=protobuf&projectID",
+            `${PM_API_ROOT}/api/v1/projects/getProject?requestType=protobuf&projectID`,
     };
 
     const mapStateToProps = (state) => ({

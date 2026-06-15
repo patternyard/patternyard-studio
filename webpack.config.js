@@ -1,4 +1,8 @@
 const defaultsDeep = require('lodash.defaultsdeep');
+// wycats fork: optionally load a local .env so PM_* service roots (and other
+// build vars) can be configured without exporting them in the shell. Optional:
+// if dotenv isn't installed the build still works using DefinePlugin defaults.
+try { require('dotenv').config(); } catch (e) { /* dotenv optional */ }
 var path = require('path');
 var webpack = require('webpack');
 
@@ -164,7 +168,13 @@ module.exports = [
                 'process.env.ANNOUNCEMENT': JSON.stringify(process.env.ANNOUNCEMENT || ''),
                 'process.env.ENABLE_SERVICE_WORKER': JSON.stringify(process.env.ENABLE_SERVICE_WORKER || ''),
                 'process.env.ROOT': JSON.stringify(root),
-                'process.env.ROUTING_STYLE': JSON.stringify(process.env.ROUTING_STYLE || 'filehash')
+                'process.env.ROUTING_STYLE': JSON.stringify(process.env.ROUTING_STYLE || 'filehash'),
+                // wycats fork: PenguinMod service roots (see src/lib/pm-config.js)
+                'process.env.PM_API_ROOT': JSON.stringify(process.env.PM_API_ROOT || ''),
+                'process.env.PM_EXTENSIONS_ROOT': JSON.stringify(process.env.PM_EXTENSIONS_ROOT || ''),
+                'process.env.PM_LIBRARY_ROOT': JSON.stringify(process.env.PM_LIBRARY_ROOT || ''),
+                'process.env.PM_ASSET_CDN_ROOT': JSON.stringify(process.env.PM_ASSET_CDN_ROOT || ''),
+                'process.env.PM_DOCS_ROOT': JSON.stringify(process.env.PM_DOCS_ROOT || '')
             }),
             new HtmlWebpackPlugin({
                 chunks: ['editor'], template: 'src/playground/index.ejs', filename: 'editor.html',

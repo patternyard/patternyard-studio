@@ -3,6 +3,8 @@ import ScratchStorage from "scratch-storage";
 import defaultProject from "./default-project";
 import missingProject from "./tw-missing-project";
 
+import {PM_API_ROOT} from './pm-config';
+
 /**
  * Wrapper for ScratchStorage which adds default web sources.
  * @todo make this more configurable
@@ -87,7 +89,7 @@ class Storage extends ScratchStorage {
             return `https://assets.scratch.mit.edu/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;
         }
 
-        return `https://projects.penguinmod.com/api/v1/projects/backupassetget?asset_name=${this.projectId}_${asset.assetId}.${asset.dataFormat}`;
+        return `${PM_API_ROOT}/api/v1/projects/backupassetget?asset_name=${this.projectId}_${asset.assetId}.${asset.dataFormat}`;
     }
     getScratchAssetGetConfig(asset) {
         return `https://assets.scratch.mit.edu/internalapi/asset/${asset.assetId}.${asset.dataFormat}/get/`;

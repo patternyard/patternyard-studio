@@ -1,3 +1,4 @@
+import {PM_API_ROOT} from '../../lib/pm-config';
 const shuffle = list => {
     for (let i = list.length - 1; i > 0; i--) {
         const random = Math.floor(Math.random() * (i + 1));
@@ -83,20 +84,20 @@ DogeisCut (https://github.com/DogeisCut) (discord: dogeiscut)
 const pmSupporterImage = (username) => {
     switch (username) {
         case "mralien7893":
-            return "https://projects.penguinmod.com/api/v1/users/getpfp?username=mralien7893";
+            return `${PM_API_ROOT}/api/v1/users/getpfp?username=mralien7893`;
         case "electricfuzzball_pm":
-            return "https://projects.penguinmod.com/api/v1/users/getpfp?username=electricfuzzball_pm";
+            return `${PM_API_ROOT}/api/v1/users/getpfp?username=electricfuzzball_pm`;
         case "kylomaskgamer":
-            return "https://projects.penguinmod.com/api/v1/users/getpfp?username=kylomaskgamer";
+            return `${PM_API_ROOT}/api/v1/users/getpfp?username=kylomaskgamer`;
         case "MrRedstonia":
-            return "https://projects.penguinmod.com/api/v1/users/getpfp?username=mrredstonia";
+            return `${PM_API_ROOT}/api/v1/users/getpfp?username=mrredstonia`;
         default:
             return `https://penguinmod.com/unknown_user.png`;
     }
 };
 const pmSupporterImageFromLine = (line) => {
     const match = line.match(/penguinmod\.com\/profile\?user=([a-zA-Z0-9_-]+)/);
-    return match ? `https://projects.penguinmod.com/api/v1/users/getpfp?username=${match[1]}` : null;
+    return match ? `${PM_API_ROOT}/api/v1/users/getpfp?username=${match[1]}` : null;
 };
 const pmSupporters = pmSupportersText
     .replace(/\r/g, "")
@@ -333,7 +334,7 @@ const pmTranslators = [
     },
     {
         text: 'NamelessCat',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=cat`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=cat`,
         href: "https://penguinmod.com/profile?user=cat",
     },
     {
@@ -353,12 +354,12 @@ const pmTranslators = [
     },
     {
         text: 'MrRedstonia',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=mrredstonia`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=mrredstonia`,
         href: "https://penguinmod.com/profile?user=mrredstonia",
     },
     {
         text: 'TheShovel',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=TheShovel`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=TheShovel`,
         href: "https://penguinmod.com/profile?user=TheShovel",
     },
     {
@@ -368,7 +369,7 @@ const pmTranslators = [
     },
     {
         text: 'GigantTech',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=GigantTech`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=GigantTech`,
         href: "https://penguinmod.com/profile?user=GigantTech",
     },
     {
@@ -403,7 +404,7 @@ const pmTranslators = [
     },
     {
         text: 'DenPlayTS',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=denplayts`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=denplayts`,
         href: "https://penguinmod.com/profile?user=denplayts",
     },
     {
@@ -413,7 +414,7 @@ const pmTranslators = [
     },
     {
         text: 'MubiLop',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=MubiLop`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=MubiLop`,
         href: "https://penguinmod.com/profile?user=MubiLop",
     },
     {
@@ -443,7 +444,7 @@ const pmTranslators = [
     },
     {
         text: 'ImNotScratchY_lolol',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=ImNotScratchY_lolol`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=ImNotScratchY_lolol`,
         href: "https://penguinmod.com/profile?user=ImNotScratchY_lolol",
     },
     {
@@ -453,12 +454,12 @@ const pmTranslators = [
     },
     {
         text: 'inventionpro',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=inventionpro`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=inventionpro`,
         href: "https://penguinmod.com/profile?user=inventionpro",
     },
     {
         text: 'SkyBuilder1717',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=SkyBuilder1717`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=SkyBuilder1717`,
         href: "https://penguinmod.com/profile?user=SkyBuilder1717",
     },
     {
@@ -473,7 +474,7 @@ const pmTranslators = [
     },
     {
         text: 'Oldcoinmania',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=Oldcoinmania`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=Oldcoinmania`,
         href: "https://penguinmod.com/profile?user=Oldcoinmania",
     },
     {
@@ -488,27 +489,27 @@ const pmTranslators = [
     },
     {
         text: 'enduh',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=enduh`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=enduh`,
         href: "https://penguinmod.com/profile?user=enduh",
     },
     {
         text: 'riwataNOUVEAU',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=riwataNOUVEAU`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=riwataNOUVEAU`,
         href: "https://penguinmod.com/profile?user=riwataNOUVEAU",
     },
     {
         text: 'Prode',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=Prode`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=Prode`,
         href: "https://penguinmod.com/profile?user=Prode",
     },
     {
         text: 'dotun',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=dotun`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=dotun`,
         href: "https://penguinmod.com/profile?user=dotun",
     },
     {
         text: 'phi_wpentomino',
-        image: `https://projects.penguinmod.com/api/v1/users/getpfp?username=phi_wpentomino`,
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=phi_wpentomino`,
         href: "https://penguinmod.com/profile?user=phi_wpentomino",
     },
 ];
@@ -606,7 +607,7 @@ const pmCostumeSubmittors = [
     },
     {
         text: "Anonygoose's Dog (Max)",
-        image: "https://projects.penguinmod.com/api/v1/users/getpfp?username=anonygoosedog",
+        image: `${PM_API_ROOT}/api/v1/users/getpfp?username=anonygoosedog`,
         href: "https://penguinmod.com/profile?user=anonygoosedog",
     },
     {

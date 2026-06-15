@@ -184,6 +184,8 @@ import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
 // default icon if one is not made yet...
 import defaultExtensionIcon from './penguinmod/extensions/placeholder.png';
 
+import {PM_EXTENSIONS_ROOT, PM_LIBRARY_ROOT} from '../../pm-config';
+
 const urlParams = new URLSearchParams(location.search);
 const IsLocal = String(window.location.href).startsWith(`http://localhost:`);
 const IsLiveTests = urlParams.has('livetests');
@@ -374,9 +376,9 @@ const menuItems = [
     },
     {
         name: 'Pen+',
-        extensionId: 'https://extensions.penguinmod.com/extensions/ObviousAlexC/PenPlus.js',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/ObviousAlexC/PenPlus.js`,
         tags: ['categoryexpansion', 'graphics'],
-        iconURL: 'https://extensions.penguinmod.com/images/ObviousAlexC/PenPlus.svg',
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/ObviousAlexC/PenPlus.svg`,
         description: 'An extension to the Pen category! Adds blocks for drawing triangles using textures and tints, drawing images and editing their pixels, etc.',
         featured: true,
         extDeveloper: 'pinksheep2917'
@@ -400,7 +402,7 @@ const menuItems = [
     },
     {
         name: 'Sound Waves',
-        extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Sound-Waves.js',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/SharkPool/Sound-Waves.js`,
         iconURL: spSoundWaveIcon,
         tags: ['penguinmod', 'noisemaker'],
         description: 'Make sounds with oscillators!',
@@ -526,8 +528,8 @@ const menuItems = [
     },
     {
         name: 'Tile Grids',
-        extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Tile-Grids.js',
-        iconURL: 'https://extensions.penguinmod.com/images/SharkPool/Tile-Grids.svg',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/SharkPool/Tile-Grids.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/SharkPool/Tile-Grids.svg`,
         tags: ['penguinmod'],
         description: 'Place sprites on grids.',
         extDeveloper: 'SharkPool-SP',
@@ -623,7 +625,7 @@ const menuItems = [
     },
     {
         name: 'Font Manager',
-        extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/Font-Manager.js',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/SharkPool/Font-Manager.js`,
         iconURL: spFontManagerIcon,
         tags: ['penguinmod', 'graphics'],
         description: 'Manage, create, and delete fonts.',
@@ -652,10 +654,10 @@ const menuItems = [
     },
     {
         name: 'CloudLink',
-        extensionId: 'https://extensions.penguinmod.com/extensions/MikeDev101/cloudlink.js',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/MikeDev101/cloudlink.js`,
         tags: ['turbowarp', 'penguinmod'],
         insetIconURL: cloudlinkIcon,
-        iconURL: 'https://extensions.penguinmod.com/images/MikeDev101/cloudlink.svg',
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/MikeDev101/cloudlink.svg`,
         description: 'A powerful WebSocket extension for Scratch.',
         featured: true,
         extDeveloper: 'MikeDev',
@@ -671,8 +673,8 @@ const menuItems = [
     },
     {
         name: 'Pang API',
-        extensionId: 'https://extensions.penguinmod.com/extensions/SammerLOL/pangapi.js',
-        iconURL: 'https://extensions.penguinmod.com/images/SammerLOL/pangapi.avif',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/SammerLOL/pangapi.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/SammerLOL/pangapi.avif`,
         tags: ['penguinmod'],
         description: 'Fetch information from the PenguinMod API.',
         extDeveloper: 'oc9x97, Ianyourgod',
@@ -680,8 +682,8 @@ const menuItems = [
     },
     {
         name: '3D Math',
-        extensionId: 'https://extensions.penguinmod.com/extensions/ObviousAlexC/3DMath.js',
-        iconURL: 'https://extensions.penguinmod.com/images/ObviousAlexC/3DMath.svg',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/ObviousAlexC/3DMath.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/ObviousAlexC/3DMath.svg`,
         tags: ['penguinmod', '3d', 'graphics', 'math'],
         description: 'A handful of utilities for making your own sprite-based 3D engine.',
         extDeveloper: 'pinksheep2917',
@@ -689,8 +691,8 @@ const menuItems = [
     },
     {
         name: 'Random Utilities',
-        extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/random_utils.js',
-        iconURL: 'https://extensions.penguinmod.com/images/Gen1x/randomutils.avif',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/Gen1x/random_utils.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/Gen1x/randomutils.avif`,
         tags: ['penguinmod'],
         description: 'Many blocks related to generating random values, including seed-based number generation, true number generation, UUID\'s, random strings, etc.',
         extDeveloper: 'G1nX',
@@ -867,8 +869,8 @@ const menuItems = [
     },
     {
         name: 'Objects',
-        extensionId: 'https://extensions.penguinmod.com/extensions/DogeisCut/dogeiscutObject.js',
-        iconURL: 'https://extensions.penguinmod.com/images/DogeisCut/dogeiscutObject.svg',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/DogeisCut/dogeiscutObject.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/DogeisCut/dogeiscutObject.svg`,
         tags: ['penguinmod', 'datamgmt'],
         description: 'Store data efficiently in multi-purpose objects.',
         extDeveloper: 'DogeisCut',
@@ -1125,7 +1127,7 @@ const menuItems = [
                 id="pm.extraLibraryExtensions.name"
             />
         ),
-        href: 'https://extensions.penguinmod.com/?editor=true',
+        href: `${PM_EXTENSIONS_ROOT}/?editor=true`,
         extensionId: 'special_penguinmodExtensionLibrary',
         iconURL: penguinmodLibraryExtensionIcon,
         description: (
@@ -1373,7 +1375,7 @@ if (IsLocal || IsLiveTests) {
         {
             name: 'Christmas',
             extensionId: 'jgChristmas',
-            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/christmas.avif',
+            iconURL: `${PM_EXTENSIONS_ROOT}/images/JeremyGamer13/christmas.avif`,
             tags: ['penguinmod', 'joke'],
             description: 'hooraye',
             featured: true
@@ -1381,7 +1383,7 @@ if (IsLocal || IsLiveTests) {
         {
             name: 'an amazing extension',
             extensionId: 'jgBestExtension',
-            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/epic.avif',
+            iconURL: `${PM_EXTENSIONS_ROOT}/images/JeremyGamer13/epic.avif`,
             internetConnectionRequired: true,
             tags: ['penguinmod', 'joke'],
             description: 'this is SUCH A GOOD EXTENSION USE IT NOW',
@@ -1389,16 +1391,16 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'Epic utilities',
-            extensionId: 'https://extensions.penguinmod.com/extensions/SharkPool/AprilFools.js',
-            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/epicutils.avif',
+            extensionId: `${PM_EXTENSIONS_ROOT}/extensions/SharkPool/AprilFools.js`,
+            iconURL: `${PM_EXTENSIONS_ROOT}/images/JeremyGamer13/epicutils.avif`,
             tags: ['penguinmod', 'joke'],
             description: 'the super good utilities brought to you by todays sponsor sharkpool (the epic utilities)',
             featured: true
         },
         {
             name: 'CATS',
-            extensionId: 'https://extensions.penguinmod.com/extensions/Gen1x/CATS.js',
-            iconURL: 'https://extensions.penguinmod.com/images/Gen1x/cats.avif',
+            extensionId: `${PM_EXTENSIONS_ROOT}/extensions/Gen1x/CATS.js`,
+            iconURL: `${PM_EXTENSIONS_ROOT}/images/Gen1x/cats.avif`,
             tags: ['penguinmod', 'joke'],
             description: 'Blocks related to cats.',
             extDeveloper: 'G1nX',
@@ -1416,8 +1418,8 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'image blocks',
-            extensionId: 'https://extensions.penguinmod.com/extensions/Ashime/funneimageblocks.js',
-            iconURL: 'https://extensions.penguinmod.com/images/JeremyGamer13/screenshot1.avif',
+            extensionId: `${PM_EXTENSIONS_ROOT}/extensions/Ashime/funneimageblocks.js`,
+            iconURL: `${PM_EXTENSIONS_ROOT}/images/JeremyGamer13/screenshot1.avif`,
             tags: ['penguinmod', 'joke'],
             internetConnectionRequired: true,
             description: 'who needs cat blocks when you have penguin block',
@@ -1426,8 +1428,8 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'fire in the hole',
-            extensionId: 'https://extensions.penguinmod.com/extensions/JeremyGamer13/FireInTheHole.js',
-            iconURL: 'https://library.penguinmod.com/files/emojis/cluelesssmile.png',
+            extensionId: `${PM_EXTENSIONS_ROOT}/extensions/JeremyGamer13/FireInTheHole.js`,
+            iconURL: `${PM_LIBRARY_ROOT}/files/emojis/cluelesssmile.png`,
             tags: ['penguinmod', 'joke'],
             internetConnectionRequired: true,
             description: 'april fools took too long man this joke is not funny anymore',

@@ -47,6 +47,8 @@ import runAddons from '../addons/entry';
 import styles from './interface.css';
 import restore from './restore.js';
 
+import {PM_API_ROOT, PM_LIBRARY_ROOT} from '../lib/pm-config';
+
 const urlparams = new URLSearchParams(location.search);
 const restoring = urlparams.get('restore');
 const restoreHandler = urlparams.get('handler');
@@ -84,7 +86,7 @@ const formatProjectTitle = _title => {
     return title.replace(emojiRegex, match => {
         const emojiName = match.replace(/:/gmi, '');
         return `<img
-            src="https://library.penguinmod.com/files/emojis/${emojiName}.png"
+            src="${PM_LIBRARY_ROOT}/files/emojis/${emojiName}.png"
             alt=":${emojiName}:"
             title=":${emojiName}:"
             loading="lazy"
@@ -281,7 +283,7 @@ class Interface extends React.Component {
     }
     copyProjectLink (id) {
         if ('clipboard' in navigator && 'writeText' in navigator.clipboard) {
-            navigator.clipboard.writeText(`https://projects.penguinmod.com/${id}`);
+            navigator.clipboard.writeText(`${PM_API_ROOT}/${id}`);
         }
     }
     render () {
@@ -350,7 +352,7 @@ class Interface extends React.Component {
                                 className={styles.projectAuthorImage}
                                 title={extraProjectInfo.author}
                                 alt={extraProjectInfo.author}
-                                src={`https://projects.penguinmod.com/api/v1/users/getpfp?username=${extraProjectInfo.author}`}
+                                src={`${PM_API_ROOT}/api/v1/users/getpfp?username=${extraProjectInfo.author}`}
                             />
                         </a>
                         <div className={styles.projectMetadata}>
@@ -396,7 +398,7 @@ class Interface extends React.Component {
                                                 className={styles.remixAuthorImage}
                                                 title={remixedProjectInfo.author}
                                                 alt={remixedProjectInfo.author}
-                                                src={`https://projects.penguinmod.com/api/v1/users/getpfp?username=${remixedProjectInfo.author}`}
+                                                src={`${PM_API_ROOT}/api/v1/users/getpfp?username=${remixedProjectInfo.author}`}
                                             />
                                         </a>
                                         <p>

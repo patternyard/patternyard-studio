@@ -7,6 +7,8 @@ import SecurityManagerModal from '../components/tw-security-manager-modal/securi
 import SecurityModals from '../lib/tw-security-manager-constants';
 import { isDefinitelyExecutable } from '../lib/pm-security-manager-download-util.js';
 
+import {PM_EXTENSIONS_ROOT} from '../lib/pm-config';
+
 /**
  * Set of extension URLs that the user has manually trusted to load unsandboxed.
  */
@@ -24,8 +26,8 @@ const manuallyTrustExtension = url => {
 const isTrustedExtensionOrigin = url => (
     /* Always trust the official extension repostiories */
     url.startsWith('https://extensions.turbowarp.org/') ||
-    url.startsWith('https://extensions.penguinmod.com/') ||
-    url.startsWith('https://penguinmod-extensions-gallery.vercel.app/') ||
+    url.startsWith(`${PM_EXTENSIONS_ROOT}/`) ||
+    url.startsWith(`${PM_EXTENSIONS_ROOT}/`) ||
 
     /* Trust other people's galleries. These can be removed in the future, they will just show a pop-up on load if they are */
     url.startsWith('https://sharkpools-extensions.vercel.app/') || // SharkPool

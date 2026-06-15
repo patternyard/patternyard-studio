@@ -5,6 +5,8 @@ import {FormattedMessage} from 'react-intl';
 import styles from './description.css';
 import {render} from 'PenguinMod-MarkDown';
 
+import {PM_LIBRARY_ROOT} from '../../lib/pm-config';
+
 const monthNames = [
     'January',
     'February',
@@ -260,7 +262,7 @@ class Renderer {
     emoji (name) {
         return (
             <img
-                src={`https://library.penguinmod.com/files/emojis/${name}.png`}
+                src={`${PM_LIBRARY_ROOT}/files/emojis/${name}.png`}
                 alt={`:${name}:`}
                 title={`:${name}:`}
                 loading="lazy"

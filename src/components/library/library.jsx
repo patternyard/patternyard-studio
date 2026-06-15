@@ -16,6 +16,8 @@ import Separator from '../tw-extension-separator/separator.jsx';
 
 import styles from './library.css';
 
+import {PM_LIBRARY_ROOT} from '../../lib/pm-config';
+
 const messages = defineMessages({
     filterPlaceholder: {
         id: 'gui.library.filterPlaceholder',
@@ -29,7 +31,7 @@ const messages = defineMessages({
     }
 });
 
-const PM_LIBRARY_API = "https://library.penguinmod.com/";
+const PM_LIBRARY_API = `${PM_LIBRARY_ROOT}/`;
 
 const ALL_TAG = {tag: 'all', intlLabel: messages.allTag};
 const tagListPrefix = [];

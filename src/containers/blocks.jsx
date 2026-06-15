@@ -40,6 +40,8 @@ import {
     activateTab,
     SOUNDS_TAB_INDEX
 } from '../reducers/editor-tab';
+import {PM_DOCS_ROOT} from '../lib/pm-config';
+
 
 // TW: Strings we add to scratch-blocks are localized here
 const messages = defineMessages({
@@ -207,7 +209,7 @@ class Blocks extends React.Component {
             window.open('https://docs.turbowarp.org/return', '_blank');
         });
         toolboxWorkspace.registerButtonCallback('OPEN_USERNAME_DOCS', () => {
-            window.open('https://docs.penguinmod.com/username', '_blank');
+            window.open(`${PM_DOCS_ROOT}/username`, '_blank');
         });
 
         // Store the xml of the toolbox that is actually rendered.

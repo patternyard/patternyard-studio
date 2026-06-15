@@ -9,6 +9,8 @@ import Button from '../button/button.jsx';
 import loadingIcon from './share-loading.svg';
 import styles from './share-button.css';
 
+import {PM_API_ROOT} from '../../lib/pm-config';
+
 const getProjectThumbnail = () => new Promise(resolve => {
     window.vm.renderer.requestSnapshot(uri => {
         resolve(uri);
@@ -28,7 +30,7 @@ const getProjectUri = () => new Promise(resolve => {
 const isUploadAvailable = async () => {
     let res = null;
     try {
-        res = await fetch('https://projects.penguinmod.com/api/v1/projects/canuploadprojects').then(res => res.json());
+        res = await fetch(`${PM_API_ROOT}/api/v1/projects/canuploadprojects`).then(res => res.json());
     } catch {
         // failed to fetch entirely
         return false;

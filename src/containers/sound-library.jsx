@@ -20,6 +20,8 @@ import soundTags from '../lib/libraries/sound-tags';
 
 import {connect} from 'react-redux';
 
+import {PM_LIBRARY_ROOT} from '../lib/pm-config';
+
 const messages = defineMessages({
     libraryTitle: {
         defaultMessage: 'Choose a Sound',
@@ -33,7 +35,7 @@ const messages = defineMessages({
     }
 });
 
-const PM_LIBRARY_API = "https://library.penguinmod.com/";
+const PM_LIBRARY_API = `${PM_LIBRARY_ROOT}/`;
 
 // @todo need to use this hack to avoid library using md5 for image
 const getSoundLibraryThumbnailData = (soundLibraryContent, isRtl) => soundLibraryContent
