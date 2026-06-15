@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/PenguinMod-Packager",
+      "destination": "https://penguinmod-packager.vercel.app/"
+    },
+    {
+      "source": "/PenguinMod-Packager/:path*",
+      "destination": "https://penguinmod-packager.vercel.app/:path*"
+    }
+  ]
+}
