@@ -15,6 +15,7 @@
  */
 
 import React from 'react';
+import {APP_NAME} from '../../lib/brand';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -55,7 +56,7 @@ if (locale !== 'en') {
     }
 }
 
-document.title = `${settingsTranslations.title} - PenguinMod`;
+document.title = `${settingsTranslations.title} - ${APP_NAME}`;
 
 const theme = getInitialDarkMode() ? 'dark' : 'light';
 document.body.setAttribute('theme', theme);
