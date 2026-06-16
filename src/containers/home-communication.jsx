@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {setUsername, setUsernameInvalid, setUsernameLoggedIn} from '../reducers/tw';
+import {PM_HOME_ROOT} from '../lib/pm-config';
 
-let origin = "https://penguinmod.com";
+let origin = PM_HOME_ROOT;
 // origin = 'http://localhost:5173';
 
 class HomeCommunication extends React.Component {

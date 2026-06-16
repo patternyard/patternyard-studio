@@ -29,11 +29,13 @@ export const PM_EXTENSIONS_ROOT = stripTrailingSlash(process.env.PM_EXTENSIONS_R
 export const PM_LIBRARY_ROOT = stripTrailingSlash(process.env.PM_LIBRARY_ROOT || 'https://library.penguinmod.com');
 export const PM_ASSET_CDN_ROOT = stripTrailingSlash(process.env.PM_ASSET_CDN_ROOT || 'https://asset-cdn.penguinmod.com');
 export const PM_DOCS_ROOT = stripTrailingSlash(process.env.PM_DOCS_ROOT || 'https://docs.penguinmod.com');
+export const PM_HOME_ROOT = stripTrailingSlash(process.env.PM_HOME_ROOT || 'https://penguinmod.com');
 
 export default {
     PM_API_ROOT,
     PM_EXTENSIONS_ROOT,
     PM_LIBRARY_ROOT,
     PM_ASSET_CDN_ROOT,
-    PM_DOCS_ROOT
+    PM_DOCS_ROOT,
+    PM_HOME_ROOT
 };
