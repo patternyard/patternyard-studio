@@ -145,9 +145,10 @@ const Footer = () => (
             <div className={styles.footerText}>
                 <FormattedMessage
                     // eslint-disable-next-line max-len
-                    defaultMessage="PenguinMod and TurboWarp are not affiliated with Scratch, the Scratch Team, or the Scratch Foundation."
+                    defaultMessage="{APP_NAME} and TurboWarp are not affiliated with Scratch, the Scratch Team, or the Scratch Foundation."
                     description="Disclaimer that PenguinMod and TurboWarp are not connected to Scratch"
                     id="tw.footer.disclaimer"
+                    values={{APP_NAME}}
                 />
             </div>
             <div className={styles.footerColumns}>
@@ -170,7 +171,7 @@ const Footer = () => (
                 <div className={styles.footerSection}>
                     <a href="https://studio.penguinmod.com/PenguinMod-Packager">
                         {/* Do not translate */}
-                        {'PenguinMod Packager'}
+                        {`${APP_NAME} Packager`}
                     </a>
                     <a href="https://desktop.turbowarp.org/">
                         {/* Do not translate */}
@@ -213,14 +214,14 @@ const Footer = () => (
                             id="tw.privacy"
                         />
                     </a>
-                    <a href="https://github.com/PenguinMod/PenguinMod-Home/issues">
+                    <a href="https://github.com/PatternYard/PatternYard-Home/issues">
                         <FormattedMessage
                             defaultMessage="Feedback & Bugs"
                             description="Link to feedback/bugs page"
                             id="tw.feedback"
                         />
                     </a>
-                    <a href="https://github.com/PenguinMod">
+                    <a href="https://github.com/PatternYard">
                         <FormattedMessage
                             defaultMessage="Source Code"
                             description="Link to source code"

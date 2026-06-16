@@ -142,7 +142,7 @@ export default defineMessages({
         id: 'pm.libraryTags.guns'
     },
     penguinmod: {
-        defaultMessage: 'PenguinMod',
+        defaultMessage: 'PatternYard',
         description: 'Tag for filtering a library by PenguinMod',
         id: 'pm.libraryTags.penguinmod'
     },

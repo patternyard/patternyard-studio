@@ -188,9 +188,10 @@ const CustomExtensionModal = props => (
                 <p>
                     <FormattedMessage
                         // eslint-disable-next-line max-len
-                        defaultMessage="Your browser may not allow PenguinMod to access certain sites. If this is causing issues for you, try loading from a file or text instead."
+                        defaultMessage="Your browser may not allow {APP_NAME} to access certain sites. If this is causing issues for you, try loading from a file or text instead."
                         description="Message that appears in custom extension prompt"
                         id="pm.customExtensionModal.corsProblem"
+                        values={{APP_NAME}}
                     />
                 </p>
             )}

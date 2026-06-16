@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { defineMessages, FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {APP_NAME} from '../../lib/brand';
 
 import Box from '../box/box.jsx';
 import Modal from '../../containers/modal.jsx';
@@ -208,7 +209,7 @@ const PromptComponent = props => props.isCustom ? (
                                     rel="noopener noreferrer"
                                 >
                                     {/* Should not be translated */}
-                                    {'PenguinMod Packager'}
+                                    {`${APP_NAME} Packager`}
                                 </a>
                             )
                         }}

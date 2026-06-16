@@ -1,4 +1,5 @@
 import { isApiAvailable, isTypeFilterAvailable } from './pm-mature-fs-available';
+import {APP_NAME} from './brand';
 
 const available = isApiAvailable;
 
@@ -8,7 +9,7 @@ const showSaveFilePicker = fileName => window.showSaveFilePicker({
     ...(!isTypeFilterAvailable() ? {} : {
         types: [
             {
-                description: 'PenguinMod Project',
+                description: `${APP_NAME} Project`,
                 accept: {
                     'application/x.scratch.sb3': '.pmp'
                 }
@@ -30,7 +31,7 @@ const showOpenFilePicker = async () => {
                     }
                 },
                 {
-                    description: 'PenguinMod Project',
+                    description: `${APP_NAME} Project`,
                     accept: {
                         'application/x.scratch.sb3': ['.pmp', '.pm']
                     }
