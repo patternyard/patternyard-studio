@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 import {defineMessages, FormattedMessage, injectIntl, intlShape} from 'react-intl';
+import {APP_NAME} from '../../lib/brand';
 
 import Waveform from '../waveform/waveform.jsx';
 import Label from '../forms/label.jsx';
@@ -430,9 +431,10 @@ const SoundEditor = props => (
         {props.size >= SOUND_BYTE_LIMIT && (
             <div className={classNames(styles.alert, styles.tooLarge)}>
                 <FormattedMessage
-                    defaultMessage="This sound could be too large to upload to PenguinMod."
+                    defaultMessage="This sound could be too large to upload to {APP_NAME}."
                     description="Message that appears when a sound exceeds the PenguinMod sound size limit."
                     id="pm.tooLarge"
+                    values={{APP_NAME}}
                 />
             </div>
         )}

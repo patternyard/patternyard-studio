@@ -637,7 +637,7 @@ const menuItems = [
         extensionId: 'jgStorage',
         iconURL: jgStorageExtensionIcon,
         tags: ['penguinmod', 'datamgmt'],
-        description: 'Store data after PenguinMod has already been closed out. Basic Server Storage is also included.',
+        description: `Store data after ${APP_NAME} has already been closed out. Basic Server Storage is also included.`,
         eventSubmittor: 'Fir & silvxrcat',
         featured: true
     },
@@ -676,7 +676,7 @@ const menuItems = [
         extensionId: `${PM_EXTENSIONS_ROOT}/extensions/SammerLOL/pangapi.js`,
         iconURL: `${PM_EXTENSIONS_ROOT}/images/SammerLOL/pangapi.avif`,
         tags: ['penguinmod'],
-        description: 'Fetch information from the PenguinMod API.',
+        description: `Fetch information from the ${APP_NAME} API.`,
         extDeveloper: 'oc9x97, Ianyourgod',
         featured: true
     },
@@ -1122,9 +1122,10 @@ const menuItems = [
     {
         name: (
             <FormattedMessage
-                defaultMessage="PenguinMod Extra Extensions"
+                defaultMessage="{APP_NAME} Extra Extensions"
                 description="Name of library item to open the Extra Extensions gallery"
                 id="pm.extraLibraryExtensions.name"
+                values={{APP_NAME}}
             />
         ),
         href: `${PM_EXTENSIONS_ROOT}/?editor=true`,
@@ -1504,11 +1505,11 @@ if (IsLocal || IsLiveTests) {
             featured: true
         },
         {
-            name: 'PenguinMod Permissions',
+            name: `${APP_NAME} Permissions`,
             extensionId: 'JgPermissionBlocks',
             iconURL: jgPermissionExtensionIcon,
             tags: ['penguinmod'],
-            description: 'Legacy extension, old blocks no longer serve a real purpose. Direct blocks to manage permissions that PenguinMod requires you have to do certain tasks.',
+            description: `Legacy extension, old blocks no longer serve a real purpose. Direct blocks to manage permissions that ${APP_NAME} requires you have to do certain tasks.`,
             featured: true
         },
         {
