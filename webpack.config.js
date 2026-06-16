@@ -174,7 +174,8 @@ module.exports = [
                 'process.env.PM_EXTENSIONS_ROOT': JSON.stringify(process.env.PM_EXTENSIONS_ROOT || ''),
                 'process.env.PM_LIBRARY_ROOT': JSON.stringify(process.env.PM_LIBRARY_ROOT || ''),
                 'process.env.PM_ASSET_CDN_ROOT': JSON.stringify(process.env.PM_ASSET_CDN_ROOT || ''),
-                'process.env.PM_DOCS_ROOT': JSON.stringify(process.env.PM_DOCS_ROOT || '')
+                'process.env.PM_DOCS_ROOT': JSON.stringify(process.env.PM_DOCS_ROOT || ''),
+                'process.env.PM_HOME_ROOT': JSON.stringify(process.env.PM_HOME_ROOT || '')
             }),
             new HtmlWebpackPlugin({
                 chunks: ['editor'], template: 'src/playground/index.ejs', filename: 'editor.html',
