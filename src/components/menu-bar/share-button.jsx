@@ -9,7 +9,7 @@ import Button from '../button/button.jsx';
 import loadingIcon from './share-loading.svg';
 import styles from './share-button.css';
 
-import {PM_API_ROOT, PM_HOME_ROOT} from '../../lib/pm-config';
+import {PM_API_ROOT, PM_HOME_ROOT, PM_HOME_ORIGIN} from '../../lib/pm-config';
 
 const getProjectThumbnail = () => new Promise(resolve => {
     window.vm.renderer.requestSnapshot(uri => {
@@ -62,7 +62,7 @@ class ShareButton extends React.Component {
         this.handleMessageEvent(e);
     }
     async handleMessageEvent(e) {
-        if (!e.origin.startsWith(PM_HOME_ROOT)) {
+        if (e.origin !== PM_HOME_ORIGIN) {
             return;
         }
 

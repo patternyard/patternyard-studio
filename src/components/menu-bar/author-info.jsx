@@ -32,7 +32,7 @@ const ActualAuthorInfo = ({
             </h1>
             <div>
                 <span className={styles.usernameLine}>
-                    <a style={{ color: "white" }} target="_blank" href={`${PM_HOME_ROOT}/profile?user=` + username}>
+                    <a style={{ color: "white" }} target="_blank" rel="noopener noreferrer" href={`${PM_HOME_ROOT}/profile?user=` + username}>
                         <FormattedMessage
                             defaultMessage="by {username}"
                             description="Shows that a project was created by this user"

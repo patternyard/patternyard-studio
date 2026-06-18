@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import appTarget from '../app-target';
 import styles from './credits.css';
-import {PM_HOME_ROOT} from '../../lib/pm-config';
+import {PM_HOME_ROOT, PM_HOME_HOST} from '../../lib/pm-config';
 import classNames from 'classnames';
 import { getInitialDarkMode } from '../../lib/tw-theme-hoc.jsx';
 
@@ -125,7 +125,7 @@ const Credits = () => (
             </a>
             <h2>Domain Provider</h2>
             <p>
-                <a href={PM_HOME_ROOT}>patternyard.dev</a> (and any subdomains) are currently
+                <a href={PM_HOME_ROOT}>{PM_HOME_HOST || PM_HOME_ROOT}</a> (and any subdomains) are currently
                 provided by <a href="https://github.com/enderhacker">enderhacker</a>.
                 <br></br>
                 <a href="https://github.com/enderhacker">

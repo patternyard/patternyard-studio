@@ -7,7 +7,7 @@ import SecurityManagerModal from '../components/tw-security-manager-modal/securi
 import SecurityModals from '../lib/tw-security-manager-constants';
 import { isDefinitelyExecutable } from '../lib/pm-security-manager-download-util.js';
 
-import {PM_EXTENSIONS_ROOT, PM_HOME_ROOT} from '../lib/pm-config';
+import {PM_EXTENSIONS_ROOT, PM_HOME_ORIGIN, PM_HOME_HOST} from '../lib/pm-config';
 
 /**
  * Set of extension URLs that the user has manually trusted to load unsandboxed.
@@ -76,8 +76,8 @@ const isAlwaysTrustedForFetching = parsed => (
     parsed.origin.endsWith('.turbowarp.xyz') ||
 
     // Any PatternYard service such as projects
-    parsed.origin === PM_HOME_ROOT ||
-    parsed.origin.endsWith(`.${new URL(PM_HOME_ROOT).host}`) ||
+    parsed.origin === PM_HOME_ORIGIN ||
+    (PM_HOME_HOST && parsed.origin.endsWith(`.${PM_HOME_HOST}`)) ||
 
     // GitHub
     parsed.origin === 'https://raw.githubusercontent.com' ||

@@ -40,6 +40,25 @@ export const PM_DOCS_ROOT = stripTrailingSlash(process.env.PM_DOCS_ROOT || 'http
 export const PM_HOME_ROOT = stripTrailingSlash(process.env.PM_HOME_ROOT || 'https://patternyard.dev');
 export const PM_STUDIO_ROOT = stripTrailingSlash(process.env.PM_STUDIO_ROOT || 'https://studio.patternyard.dev');
 
+/**
+ * Parsed forms of PM_HOME_ROOT, computed once so consumers don't repeatedly
+ * call `new URL()` (which throws on a non-absolute value). If PM_HOME_ROOT is
+ * ever misconfigured without a scheme, these are `null` and callers should
+ * treat the origin as untrusted rather than crash.
+ */
+const parsedHome = (() => {
+    try {
+        return new URL(PM_HOME_ROOT);
+    } catch (e) {
+        return null;
+    }
+})();
+
+// Exact origin (scheme + host + port) for first-party trust checks.
+export const PM_HOME_ORIGIN = parsedHome ? parsedHome.origin : PM_HOME_ROOT;
+// Bare host, for subdomain suffix matching (e.g. `.patternyard.dev`).
+export const PM_HOME_HOST = parsedHome ? parsedHome.host : null;
+
 export default {
     PM_API_ROOT,
     PM_EXTENSIONS_ROOT,
@@ -47,5 +66,7 @@ export default {
     PM_ASSET_CDN_ROOT,
     PM_DOCS_ROOT,
     PM_HOME_ROOT,
-    PM_STUDIO_ROOT
+    PM_STUDIO_ROOT,
+    PM_HOME_ORIGIN,
+    PM_HOME_HOST
 };

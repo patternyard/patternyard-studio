@@ -10,7 +10,7 @@ const UserAvatar = ({
     imageUrl,
     username
 }) => (
-    <a target="_blank" href={`${PM_HOME_ROOT}/profile?user=` + username}>
+    <a target="_blank" rel="noopener noreferrer" href={`${PM_HOME_ROOT}/profile?user=` + username}>
         <img
             className={classNames(
                 className,
