@@ -257,7 +257,7 @@ class SB3Downloader extends React.Component {
             const fileName = pathParts.pop();
 
             // NOTE: Right now there's no reason to preserve directories, but the future save file format will use them.
-            // See here for more info: https://docs.penguinmod.com/save-format/
+            // See here for more info: https://docs.patternyard.dev/save-format/
             // make a directory for each file within one
             let currentDir = handle;
             for (const part of pathParts) {

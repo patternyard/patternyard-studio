@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import log from './log';
 import { getIsShowingProject } from '../reducers/project-state';
+import {PM_STUDIO_ROOT} from './pm-config';
 
-const PACKAGER_URL = 'https://studio.penguinmod.com/PenguinMod-Packager';
-const PACKAGER_ORIGIN = "https://studio.penguinmod.com";
+const PACKAGER_URL = `${PM_STUDIO_ROOT}/PenguinMod-Packager`;
+const PACKAGER_ORIGIN = PM_STUDIO_ROOT;
 
 const PackagerIntegrationHOC = function (WrappedComponent) {
     class PackagerIntegrationComponent extends React.Component {

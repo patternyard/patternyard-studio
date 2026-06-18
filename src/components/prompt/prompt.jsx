@@ -9,6 +9,7 @@ import Modal from '../../containers/modal.jsx';
 
 import styles from './prompt.css';
 import { SCRATCH_MAX_CLOUD_VARIABLES } from '../../lib/tw-cloud-limits.js';
+import {PM_STUDIO_ROOT} from '../../lib/pm-config';
 
 const messages = defineMessages({
     forAllSpritesMessage: {
@@ -204,7 +205,7 @@ const PromptComponent = props => props.isCustom ? (
                         values={{
                             packager: (
                                 <a
-                                    href="https://studio.penguinmod.com/PenguinMod-Packager"
+                                    href={`${PM_STUDIO_ROOT}/PenguinMod-Packager`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

@@ -8,7 +8,7 @@
 import styles from './studioview.css';
 import classNames from 'classnames';
 
-import {PM_API_ROOT} from '../../lib/pm-config';
+import {PM_API_ROOT, PM_STUDIO_ROOT} from '../../lib/pm-config';
 
 /**
  * @class
@@ -309,7 +309,7 @@ StudioView.THUMBNAIL_SRC = `${PM_API_ROOT}/api/v1/projects/getproject?projectID=
 
 // The URL for project pages.
 // $id is replaced with the project ID.
-StudioView.PROJECT_PAGE = 'https://studio.penguinmod.com/#$id';
+StudioView.PROJECT_PAGE = `${PM_STUDIO_ROOT}/#$id`;
 
 // The amount of "placeholders" to insert before the next page loads.
 StudioView.PLACEHOLDER_COUNT = 9;

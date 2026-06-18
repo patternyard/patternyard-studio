@@ -327,7 +327,7 @@ const SBFileUploaderHOC = function (WrappedComponent) {
                     zip.file(handlePath, fileData);
                 } else if (handle.kind === "directory") {
                     // NOTE: Right now there's no reason to preserve directories, but the future save file format will use them.
-                    // See here for more info: https://docs.penguinmod.com/save-format/
+                    // See here for more info: https://docs.patternyard.dev/save-format/
                     // we read the folder handle again
                     zip.folder(handlePath)
                     await this.readFolderHandleRecursively(handle, zip, `${handlePath}/`);

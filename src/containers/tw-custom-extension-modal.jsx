@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import bindAll from 'lodash.bindall';
+import {PM_HOME_ROOT} from '../lib/pm-config';
 import {connect} from 'react-redux';
 import log from '../lib/log';
 import localforage from 'localforage';
@@ -50,7 +51,7 @@ class CustomExtensionModal extends React.Component {
                 name: 'Extension',
                 description: 'Adds new blocks.',
                 tags: ['myextensions'],
-                rawURL: 'https://penguinmod.com/line_blue.png',
+                rawURL: `${PM_HOME_ROOT}/line_blue.png`,
                 featured: true,
                 deletable: true,
                 _id: generateRandomId()

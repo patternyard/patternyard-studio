@@ -1,4 +1,4 @@
-import {PM_API_ROOT} from '../../lib/pm-config';
+import {PM_API_ROOT, PM_HOME_ROOT, PM_STUDIO_ROOT} from '../../lib/pm-config';
 const shuffle = list => {
     for (let i = list.length - 1; i > 0; i--) {
         const random = Math.floor(Math.random() * (i + 1));
@@ -21,33 +21,33 @@ const fromHardcodedGithub = username => ({
     text: username
 });
 const fromHardcodedNamed = username => ({
-    image: `https://penguinmod.com/unknown_user.png`,
-    href: "https://studio.penguinmod.com/credits.html#",
+    image: `${PM_HOME_ROOT}/unknown_user.png`,
+    href: `${PM_STUDIO_ROOT}/credits.html#`,
     text: username
 });
 
 // doing it like this for now since this is how we have it in the disc server
 const pmSupportersText = `
-jwklong (https://penguinmod.com/profile?user=jwklong)
-lord cat (https://penguinmod.com/profile?user=lordcat) (discord: lordcat__)
+jwklong (${PM_HOME_ROOT}/profile?user=jwklong)
+lord cat (${PM_HOME_ROOT}/profile?user=lordcat) (discord: lordcat__)
 qloak (discord: qloakalt)
-bubasxd (https://penguinmod.com/profile?user=bubasxd) (discord: bubasgaming)
-anonymous_cat1 (https://penguinmod.com/profile?user=anonymous_cat1)
+bubasxd (${PM_HOME_ROOT}/profile?user=bubasxd) (discord: bubasgaming)
+anonymous_cat1 (${PM_HOME_ROOT}/profile?user=anonymous_cat1)
 silverstero
 evilvowel_murdersscarykiller
-jpsAR (https://penguinmod.com/profile?user=jpsar) (discord: jpsar_)
-CarrotD1scord (https://penguinmod.com/profile?user=carrotp3nguin) (discord: carrotd1scord)
-anonygoose (https://penguinmod.com/profile?user=anonygoose)
+jpsAR (${PM_HOME_ROOT}/profile?user=jpsar) (discord: jpsar_)
+CarrotD1scord (${PM_HOME_ROOT}/profile?user=carrotp3nguin) (discord: carrotd1scord)
+anonygoose (${PM_HOME_ROOT}/profile?user=anonygoose)
 legume1
-ianyourgod (https://penguinmod.com/profile?user=ianyourgod)
-MubiLop (https://penguinmod.com/profile?user=mubilop)
-thekeura (https://penguinmod.com/profile?user=thekeura) (discord: thekeura)
+ianyourgod (${PM_HOME_ROOT}/profile?user=ianyourgod)
+MubiLop (${PM_HOME_ROOT}/profile?user=mubilop)
+thekeura (${PM_HOME_ROOT}/profile?user=thekeura) (discord: thekeura)
 10000000_fireflies
 adurrina
-jeremygamer13 (https://penguinmod.com/profile?user=jeremygamer13)
+jeremygamer13 (${PM_HOME_ROOT}/profile?user=jeremygamer13)
 glacialtemptation
 camthekirby
-redman13 (https://penguinmod.com/profile?user=redman13) (discord: godslayerakp)
+redman13 (${PM_HOME_ROOT}/profile?user=redman13) (discord: godslayerakp)
 joshatticus
 krkika
 mralien7893 (https://en.pronouns.page/@Mr.Alien7893) (discord: mr.alien)
@@ -55,30 +55,30 @@ gunner_the_bear
 autoimi
 .funkoid
 tech_wizard72
-koffeejava (https://penguinmod.com/profile?user=koffeejava)
+koffeejava (${PM_HOME_ROOT}/profile?user=koffeejava)
 MrRedstonia (https://mrredstonia.com/) (discord: mrredstonia)
-vchi5332664 (https://penguinmod.com/profile?user=vchi5332664) (discord: vchidev2487)
+vchi5332664 (${PM_HOME_ROOT}/profile?user=vchi5332664) (discord: vchidev2487)
 windowsbuild3r
 atomicoperations
-joe (https://penguinmod.com/profile?user=joe) (discord: puzzlingggg)
+joe (${PM_HOME_ROOT}/profile?user=joe) (discord: puzzlingggg)
 algebruh_35
-giganttech (https://penguinmod.com/profile?user=giganttech)
-wwtv1 (https://penguinmod.com/profile?user=wwtv1) (discord: wwtv2346)
-freshpenguin112 (https://penguinmod.com/profile?user=freshpenguin112)
+giganttech (${PM_HOME_ROOT}/profile?user=giganttech)
+wwtv1 (${PM_HOME_ROOT}/profile?user=wwtv1) (discord: wwtv2346)
+freshpenguin112 (${PM_HOME_ROOT}/profile?user=freshpenguin112)
 stealpop_games
-TPR (https://penguinmod.com/profile?user=tpr)
+TPR (${PM_HOME_ROOT}/profile?user=tpr)
 kypo
-alpacalii (https://penguinmod.com/profile?user=alpacalii)
-vedal (https://penguinmod.com/profile?user=vedal) (discord: itzkingfrfr)
-TheShovel (https://penguinmod.com/profile?user=theshovel)
+alpacalii (${PM_HOME_ROOT}/profile?user=alpacalii)
+vedal (${PM_HOME_ROOT}/profile?user=vedal) (discord: itzkingfrfr)
+TheShovel (${PM_HOME_ROOT}/profile?user=theshovel)
 electricfuzzball_pm (https://www.youtube.com/@ElectricFuzzball_YT) (discord: electricfuzzball_official)
-gug. [iamgugreal1939] (https://penguinmod.com/profile?user=kiwi) (discord: iamgugreal1939)
-aubreymcleen (https://penguinmod.com/profile?user=aubreymcleen) (discord: 2faceaub)
+gug. [iamgugreal1939] (${PM_HOME_ROOT}/profile?user=kiwi) (discord: iamgugreal1939)
+aubreymcleen (${PM_HOME_ROOT}/profile?user=aubreymcleen) (discord: 2faceaub)
 kylomaskgamer (https://kylomaskgamer.ca/) (discord: kylomaskgamer)
-dotun (https://penguinmod.com/profile?user=dotun) (discord: thedotun)
+dotun (${PM_HOME_ROOT}/profile?user=dotun) (discord: thedotun)
 dillonr
 UnbraveChimp (https://minerlegacy.net) (discord: UnbraveChimp)
-rooonym (https://penguinmod.com/profile?user=rooonym)
+rooonym (${PM_HOME_ROOT}/profile?user=rooonym)
 DogeisCut (https://github.com/DogeisCut) (discord: dogeiscut)
 `;
 const pmSupporterImage = (username) => {
@@ -92,7 +92,7 @@ const pmSupporterImage = (username) => {
         case "MrRedstonia":
             return `${PM_API_ROOT}/api/v1/users/getpfp?username=mrredstonia`;
         default:
-            return `https://penguinmod.com/unknown_user.png`;
+            return `${PM_HOME_ROOT}/unknown_user.png`;
     }
 };
 const pmSupporterImageFromLine = (line) => {
@@ -114,12 +114,12 @@ const pmSupporters = pmSupportersText
 
         // getting url has ( at the start with this regex
         const linkMatch = line.match(/\(([^\)]+)/gm);
-        const potentialLink = !linkMatch ? "https://studio.penguinmod.com/credits.html#" :
+        const potentialLink = !linkMatch ? `${PM_STUDIO_ROOT}/credits.html#` :
             (`${linkMatch[0]}`.slice(1));
         return {
             text: username,
             image,
-            href: potentialLink.startsWith("https://") ? potentialLink : "https://studio.penguinmod.com/credits.html#",
+            href: potentialLink.startsWith("https://") ? potentialLink : `${PM_STUDIO_ROOT}/credits.html#`,
         };
     });
 
@@ -272,7 +272,7 @@ const pmPullRequestDevelopers = [ // these people made a PR that got merged, or 
     },
     {
         text: 'ilikecoding-197',
-        image: `https://penguinmod.com/unknown_user.png`,
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
         href: `https://github.com/ilikecoding-197/`,
     },
     {
@@ -287,7 +287,7 @@ const pmPullRequestDevelopers = [ // these people made a PR that got merged, or 
     },
     {  // rx or ry single fix
         text: 'NotCryptid',
-        image: `https://penguinmod.com/unknown_user.png`,
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
         href: `https://github.com/NotCryptid/`,
     },
     {
@@ -314,18 +314,18 @@ const pmApiDevelopers = [
 const pmTranslators = [
     {
         text: 'Mildanner',
-        image: `https://penguinmod.com/unknown_user.png`,
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
         href: "https://github.com/mildannerofc",
     },
     {
         text: 'kolikiscool',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'n0name',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'onetoanother',
@@ -335,7 +335,7 @@ const pmTranslators = [
     {
         text: 'NamelessCat',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=cat`,
-        href: "https://penguinmod.com/profile?user=cat",
+        href: `${PM_HOME_ROOT}/profile?user=cat`,
     },
     {
         text: 'Just-Noone',
@@ -344,8 +344,8 @@ const pmTranslators = [
     },
     {
         text: 'goose_but_smart',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'Le_Blob77',
@@ -355,22 +355,22 @@ const pmTranslators = [
     {
         text: 'MrRedstonia',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=mrredstonia`,
-        href: "https://penguinmod.com/profile?user=mrredstonia",
+        href: `${PM_HOME_ROOT}/profile?user=mrredstonia`,
     },
     {
         text: 'TheShovel',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=TheShovel`,
-        href: "https://penguinmod.com/profile?user=TheShovel",
+        href: `${PM_HOME_ROOT}/profile?user=TheShovel`,
     },
     {
         text: 'SmolBoi37',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'GigantTech',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=GigantTech`,
-        href: "https://penguinmod.com/profile?user=GigantTech",
+        href: `${PM_HOME_ROOT}/profile?user=GigantTech`,
     },
     {
         text: 'hacker_anonimo',
@@ -394,8 +394,8 @@ const pmTranslators = [
     },
     {
         text: 'Gabberythethughunte',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'keriyo',
@@ -405,7 +405,7 @@ const pmTranslators = [
     {
         text: 'DenPlayTS',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=denplayts`,
-        href: "https://penguinmod.com/profile?user=denplayts",
+        href: `${PM_HOME_ROOT}/profile?user=denplayts`,
     },
     {
         text: 'Tsalbre',
@@ -415,7 +415,7 @@ const pmTranslators = [
     {
         text: 'MubiLop',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=MubiLop`,
-        href: "https://penguinmod.com/profile?user=MubiLop",
+        href: `${PM_HOME_ROOT}/profile?user=MubiLop`,
     },
     {
         text: 'TLP136',
@@ -439,13 +439,13 @@ const pmTranslators = [
     },
     {
         text: 'con-zie',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'ImNotScratchY_lolol',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=ImNotScratchY_lolol`,
-        href: "https://penguinmod.com/profile?user=ImNotScratchY_lolol",
+        href: `${PM_HOME_ROOT}/profile?user=ImNotScratchY_lolol`,
     },
     {
         text: 'justablock',
@@ -455,12 +455,12 @@ const pmTranslators = [
     {
         text: 'inventionpro',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=inventionpro`,
-        href: "https://penguinmod.com/profile?user=inventionpro",
+        href: `${PM_HOME_ROOT}/profile?user=inventionpro`,
     },
     {
         text: 'SkyBuilder1717',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=SkyBuilder1717`,
-        href: "https://penguinmod.com/profile?user=SkyBuilder1717",
+        href: `${PM_HOME_ROOT}/profile?user=SkyBuilder1717`,
     },
     {
         text: 'Parham1258',
@@ -475,7 +475,7 @@ const pmTranslators = [
     {
         text: 'Oldcoinmania',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=Oldcoinmania`,
-        href: "https://penguinmod.com/profile?user=Oldcoinmania",
+        href: `${PM_HOME_ROOT}/profile?user=Oldcoinmania`,
     },
     {
         text: 'mariocraft987',
@@ -490,27 +490,27 @@ const pmTranslators = [
     {
         text: 'enduh',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=enduh`,
-        href: "https://penguinmod.com/profile?user=enduh",
+        href: `${PM_HOME_ROOT}/profile?user=enduh`,
     },
     {
         text: 'riwataNOUVEAU',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=riwataNOUVEAU`,
-        href: "https://penguinmod.com/profile?user=riwataNOUVEAU",
+        href: `${PM_HOME_ROOT}/profile?user=riwataNOUVEAU`,
     },
     {
         text: 'Prode',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=Prode`,
-        href: "https://penguinmod.com/profile?user=Prode",
+        href: `${PM_HOME_ROOT}/profile?user=Prode`,
     },
     {
         text: 'dotun',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=dotun`,
-        href: "https://penguinmod.com/profile?user=dotun",
+        href: `${PM_HOME_ROOT}/profile?user=dotun`,
     },
     {
         text: 'phi_wpentomino',
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=phi_wpentomino`,
-        href: "https://penguinmod.com/profile?user=phi_wpentomino",
+        href: `${PM_HOME_ROOT}/profile?user=phi_wpentomino`,
     },
 ];
 
@@ -542,253 +542,253 @@ const pmCostumeSubmittors = [
     },
     {
         text: 'maroonmball',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'eviepepsi',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: '1340073',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'cubeycreator',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'novaspiderultra',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'poundpound0209',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'gdplayer1035',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'cognitixsammy',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'thebusyman',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'skyglide5',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'cxnnie09',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'hoveras',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'blockgamer904',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: "Anonygoose's Dog (Max)",
         image: `${PM_API_ROOT}/api/v1/users/getpfp?username=anonygoosedog`,
-        href: "https://penguinmod.com/profile?user=anonygoosedog",
+        href: `${PM_HOME_ROOT}/profile?user=anonygoosedog`,
     },
     {
         text: 'mildannerofc',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'bonemaster96',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'phicicle',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'ron027257',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'fur1na__',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: '00ee8a',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'alf2003_14729',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'pedrotheawsomeguy',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'david342013',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'applecode_official',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'harrymations3000',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'yodaugly67_13290',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'splitthread',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'miningminer27',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'gatoc_dev',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'solar_asteri',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'greencube7',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'igorcord',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'abo_notebook',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'broguyf',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'brocant__73748',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'itz_premium',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'kirda132',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'maybe.asdf',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'atomicoperations',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'notapolishcow_52995',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'funster10123',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'jlgri',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'neo_nottro',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'wyfixp',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'blablabluhbluh',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'moony_mon.e',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'thatibrahimguy',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'somerandomguuuy',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'noteezteez',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: "FloppyDisk_OSC",
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: "dogstudiostuff",
@@ -797,8 +797,8 @@ const pmCostumeSubmittors = [
     },
     {
         text: "oldalx2020",
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: "DogeIsCut",
@@ -844,48 +844,48 @@ const pmSoundSubmittors = [
     },
     {
         text: 'maroonmball',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'jn567',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'lukepuke311',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'ma_01',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'poundpound0209',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'cognitixsammy',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'mememaster9000',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'rydia_theawesome',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'jackunavailable',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'hammouda101010',
@@ -894,122 +894,122 @@ const pmSoundSubmittors = [
     },
     {
         text: 'gdplayer1035',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'ztedsgaming',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: '_zackplayz',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: '_mya.factorial',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'funster10123',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'solar_asteri',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'Anonymous-cat1',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'hablethedev',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'ad1340',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'GlitchedSpirit',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: '.pinksus',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'wyfixp',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'atomicoperations',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'orangeluigi414',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'vojtabubela11',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'light227',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'bubgamer072',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'rugman_3',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'halliementos',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'kurrmailence',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'applecode_official',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'furbyguy',
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: 'cynicmusic',
-        image: `https://penguinmod.com/unknown_user.png`,
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
         href: "https://opengameart.org/users/cynicmusic",
     },
     {
         text: 'lushogames',
-        image: `https://penguinmod.com/unknown_user.png`,
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
         href: "https://opengameart.org/users/lushogames",
     },
     {
@@ -1024,8 +1024,8 @@ const pmSoundSubmittors = [
     },
     {
         text: "mildannerofc",
-        image: `https://penguinmod.com/unknown_user.png`,
-        href: "https://studio.penguinmod.com/credits.html#",
+        image: `${PM_HOME_ROOT}/unknown_user.png`,
+        href: `${PM_STUDIO_ROOT}/credits.html#`,
     },
     {
         text: "nataliexists",

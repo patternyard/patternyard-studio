@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import appTarget from '../app-target';
 import styles from './credits.css';
+import {PM_HOME_ROOT} from '../../lib/pm-config';
 import classNames from 'classnames';
 import { getInitialDarkMode } from '../../lib/tw-theme-hoc.jsx';
 
@@ -86,7 +87,7 @@ const Credits = () => (
                 You do not need to support PenguinMod if you do not want to, but it will help us run the services that power
                 our project sharing and other online features.
             </p>
-            <a href="https://penguinmod.com/support">
+            <a href={`${PM_HOME_ROOT}/support`}>
                 Support PenguinMod
             </a>
             <br></br>
@@ -124,7 +125,7 @@ const Credits = () => (
             </a>
             <h2>Domain Provider</h2>
             <p>
-                <a href="https://penguinmod.com">penguinmod.com</a> (and any subdomains) are currently
+                <a href={PM_HOME_ROOT}>patternyard.dev</a> (and any subdomains) are currently
                 provided by <a href="https://github.com/enderhacker">enderhacker</a>.
                 <br></br>
                 <a href="https://github.com/enderhacker">

@@ -184,7 +184,7 @@ import jgJSONExtensionIcon from './penguinmod/extensions/json.png';
 // default icon if one is not made yet...
 import defaultExtensionIcon from './penguinmod/extensions/placeholder.png';
 
-import {PM_EXTENSIONS_ROOT, PM_LIBRARY_ROOT} from '../../pm-config';
+import {PM_EXTENSIONS_ROOT, PM_LIBRARY_ROOT, PM_STUDIO_ROOT} from '../../pm-config';
 
 const urlParams = new URLSearchParams(location.search);
 const IsLocal = String(window.location.href).startsWith(`http://localhost:`);
@@ -1235,8 +1235,8 @@ const menuItems = [
     },
     {
         name: 'Extra Mathematics',
-        extensionId: 'https://extensions.penguinmod.com/extensions/jwklong/mathematics.js',
-        iconURL: 'https://extensions.penguinmod.com/images/jwklong/mathematics.avif',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/jwklong/mathematics.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/jwklong/mathematics.avif`,
         tags: ['penguinmod', 'categoryexpansion', 'math'],
         description: 'Complicated maths extension for nerds.',
         extDeveloper: 'jwklong',
@@ -1244,8 +1244,8 @@ const menuItems = [
     },
     {
         name: 'All Menus',
-        extensionId: 'https://extensions.penguinmod.com/extensions/Lily/AllMenus.js',
-        iconURL: 'https://extensions.penguinmod.com/images/Lily/AllMenus.svg',
+        extensionId: `${PM_EXTENSIONS_ROOT}/extensions/Lily/AllMenus.js`,
+        iconURL: `${PM_EXTENSIONS_ROOT}/images/Lily/AllMenus.svg`,
         tags: ['penguinmod'],
         description: 'Every dropdown menu for each block, in one extension.',
         extDeveloper: 'LilyMakesThings',
@@ -1454,7 +1454,7 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'Test Extension Loader',
-            href: 'https://studio.penguinmod.com/loadExt.html',
+            href: `${PM_STUDIO_ROOT}/loadExt.html`,
             extensionId: 'special_testExtensionLibrary',
             iconURL: defaultExtensionIcon,
             description: 'Test loading extensions from a library. For developers.',
@@ -1462,7 +1462,7 @@ if (IsLocal || IsLiveTests) {
         },
         {
             name: 'Editor',
-            href: 'https://studio.penguinmod.com/editor.html',
+            href: `${PM_STUDIO_ROOT}/editor.html`,
             extensionId: 'special_editorExtensionLibrary',
             iconURL: penguinmodLibraryExtensionIcon,
             description: 'Opens the editor with this tab as the parent, still with the library opened. For developers.',
