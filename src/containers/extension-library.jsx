@@ -12,7 +12,7 @@ import extensionTags from '../lib/libraries/extension-tags';
 import LibraryComponent from '../components/library/library.jsx';
 import extensionIcon from '../components/action-menu/icon--sprite.svg';
 
-import {PM_EXTENSIONS_ROOT} from '../lib/pm-config';
+import {PM_EXTENSIONS_ROOT, PM_STUDIO_ROOT} from '../lib/pm-config';
 
 const messages = defineMessages({
     extensionTitle: {
@@ -47,7 +47,7 @@ const messages = defineMessages({
 // Only trust loading extension links from these origins.
 // For user-made libraries.
 const TRUSTED_LOADEXT_ORIGINS = [
-    'https://studio.penguinmod.com', // for development
+    PM_STUDIO_ROOT,
     PM_EXTENSIONS_ROOT,
     'https://sharkpools-extensions.vercel.app',
     'https://raw.githubusercontent.com/SharkPool-SP/SharkPools-Extensions/main', // Some people cant connect to vercel

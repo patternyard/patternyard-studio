@@ -86,6 +86,7 @@ import SeeInsideButton from './tw-see-inside.jsx';
 import { notScratchDesktop } from '../../lib/isScratchDesktop.js';
 
 import { downloadLogs } from '../../lib/pm-log-capture.js';
+import {PM_HOME_ROOT} from '../../lib/pm-config';
 
 const ariaMessages = defineMessages({
     language: {
@@ -959,7 +960,7 @@ class MenuBar extends React.Component {
                     <div className={styles.menuBarItem}>
                         <a
                             className={styles.feedbackLink}
-                            href="https://penguinmod.com"
+                            href={PM_HOME_ROOT}
                             rel="noopener noreferrer"
                             target="_blank"
                         >

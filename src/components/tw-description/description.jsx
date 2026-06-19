@@ -5,7 +5,7 @@ import {FormattedMessage} from 'react-intl';
 import styles from './description.css';
 import {render} from 'PenguinMod-MarkDown';
 
-import {PM_LIBRARY_ROOT} from '../../lib/pm-config';
+import {PM_LIBRARY_ROOT, PM_HOME_ROOT, PM_STUDIO_ROOT} from '../../lib/pm-config';
 
 const monthNames = [
     'January',
@@ -230,7 +230,7 @@ class Renderer {
         if (/^\d{6,}$/.test(id)) {
             return (
                 <a
-                    href={`https://studio.penguinmod.com/#${id}`}
+                    href={`${PM_STUDIO_ROOT}/#${id}`}
                 >
                     {`#${id}`}
                 </a>
@@ -238,7 +238,7 @@ class Renderer {
         }
         return (
             <a
-                href={`https://penguinmod.com/search?q=%23${id}`}
+                href={`${PM_HOME_ROOT}/search?q=%23${id}`}
                 target="_blank"
                 rel="noreferrer"
             >
@@ -250,7 +250,7 @@ class Renderer {
     mention (name) {
         return (
             <a
-                href={`https://penguinmod.com/profile?user=${name}`}
+                href={`${PM_HOME_ROOT}/profile?user=${name}`}
                 target="_blank"
                 rel="noreferrer"
             >

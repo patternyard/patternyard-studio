@@ -198,9 +198,18 @@ const normalizeManifest = (id, manifest) => {
     }
 
     if (manifest.credits) {
-        for (const {link} of manifest.credits) {
-            if (link && !link.startsWith('https://scratch.mit.edu/')) {
-                console.warn(`Warning: ${id} contains unsafe credit link: ${link}`);
+        for (const credit of manifest.credits) {
+            // Keep runtime independence from upstream: upstream addon manifests
+            // ship credit links pointing at *.penguinmod.com. Rewrite the host to
+            // our own so regenerating this file never reintroduces an upstream host.
+            if (credit.link) {
+                credit.link = credit.link.replace(
+                    /^https:\/\/([a-z0-9-]+\.)*penguinmod\.com/i,
+                    (_match, sub) => `https://${sub || ''}patternyard.dev`
+                );
+            }
+            if (credit.link && !credit.link.startsWith('https://scratch.mit.edu/')) {
+                console.warn(`Warning: ${id} contains unsafe credit link: ${credit.link}`);
             }
         }
     }

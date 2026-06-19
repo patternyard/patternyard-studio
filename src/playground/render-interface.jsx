@@ -48,7 +48,7 @@ import runAddons from '../addons/entry';
 import styles from './interface.css';
 import restore from './restore.js';
 
-import {PM_API_ROOT, PM_LIBRARY_ROOT} from '../lib/pm-config';
+import {PM_API_ROOT, PM_LIBRARY_ROOT, PM_HOME_ROOT, PM_STUDIO_ROOT} from '../lib/pm-config';
 
 const urlparams = new URLSearchParams(location.search);
 const restoring = urlparams.get('restore');
@@ -130,7 +130,7 @@ runAddons();
 //     if (projectDetailCache[String(id)] != null) return projectDetailCache[String(id)];
 
 //     // TODO: when this is fixed change this to the new api
-//     const response = await fetch(`https://projects.penguinmod.com/api/projects/getPublished?id=${id}`);
+//     const response = await fetch(`${PM_API_ROOT}/api/projects/getPublished?id=${id}`);
 //     // Don't continue if the api never returned 200-299 since we would cache an error as project details
 //     if (!response.ok) return {};
 
@@ -160,7 +160,7 @@ const Footer = () => (
                             id="tw.footer.credits"
                         />
                     </a>
-                    <a href="https://penguinmod.com/donate">
+                    <a href={`${PM_HOME_ROOT}/donate`}>
                         <FormattedMessage
                             defaultMessage="Donate"
                             description="Donation link in footer"
@@ -169,7 +169,7 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://studio.penguinmod.com/PenguinMod-Packager">
+                    <a href={`${PM_STUDIO_ROOT}/PenguinMod-Packager`}>
                         {/* Do not translate */}
                         {`${APP_NAME} Packager`}
                     </a>
@@ -200,14 +200,14 @@ const Footer = () => (
                     </a>
                 </div>
                 <div className={styles.footerSection}>
-                    <a href="https://penguinmod.com/terms">
+                    <a href={`${PM_HOME_ROOT}/terms`}>
                         <FormattedMessage
                             defaultMessage="Terms of Service"
                             description="Link to Terms of Service"
                             id="pm.terms"
                         />
                     </a>
-                    <a href="https://penguinmod.com/privacy">
+                    <a href={`${PM_HOME_ROOT}/privacy`}>
                         <FormattedMessage
                             defaultMessage="Privacy Policy"
                             description="Link to privacy policy"
@@ -347,7 +347,7 @@ class Interface extends React.Component {
                     {isHomepage && projectId !== '0' && title && extraProjectInfo && extraProjectInfo.author && <div className={styles.projectDetails}>
                         <a
                             target="_blank"
-                            href={`https://penguinmod.com/profile?user=${extraProjectInfo.author}`}
+                            href={`${PM_HOME_ROOT}/profile?user=${extraProjectInfo.author}`}
                             rel="noreferrer"
                         >
                             <img
@@ -361,7 +361,7 @@ class Interface extends React.Component {
                             <h2 dangerouslySetInnerHTML={{__html: formatProjectTitle(title)}} />
                             <p>by <a
                                 target="_blank"
-                                href={`https://penguinmod.com/profile?user=${extraProjectInfo.author}`}
+                                href={`${PM_HOME_ROOT}/profile?user=${extraProjectInfo.author}`}
                                 rel="noreferrer"
                             >{extraProjectInfo.author}</a></p>
                         </div>
@@ -393,7 +393,7 @@ class Interface extends React.Component {
                                         <a
                                             style={{height: '32px'}}
                                             target="_blank"
-                                            href={`https://penguinmod.com/profile?user=${remixedProjectInfo.author}`}
+                                            href={`${PM_HOME_ROOT}/profile?user=${remixedProjectInfo.author}`}
                                             rel="noreferrer"
                                         >
                                             <img
@@ -407,7 +407,7 @@ class Interface extends React.Component {
                                             Thanks to <b>
                                                 <a
                                                     target="_blank"
-                                                    href={`https://penguinmod.com/profile?user=${remixedProjectInfo.author}`}
+                                                    href={`${PM_HOME_ROOT}/profile?user=${remixedProjectInfo.author}`}
                                                     rel="noreferrer"
                                                 >
                                                     {remixedProjectInfo.author}
@@ -497,7 +497,7 @@ class Interface extends React.Component {
                                         <a
                                             target="_blank"
                                             rel="noreferrer"
-                                            href={`https://penguinmod.com/report?type=project&id=${projectId}`}
+                                            href={`${PM_HOME_ROOT}/report?type=project&id=${projectId}`}
                                             className={styles.reportLink}
                                         >
                                             <img
@@ -518,7 +518,7 @@ class Interface extends React.Component {
                             </div>
                             <a
                                 target="_blank"
-                                href="https://penguinmod.com/search?q=newest:"
+                                href={`${PM_HOME_ROOT}/search?q=newest:`}
                                 rel="noreferrer"
                             >
                                 See more projects

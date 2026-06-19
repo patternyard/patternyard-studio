@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './vote-frame.css';
+import {PM_HOME_ROOT} from '../lib/pm-config';
 
 const VoteFrame = props => (
     <iframe
@@ -7,7 +8,7 @@ const VoteFrame = props => (
         style={props.id != '0' ? {} : { display: 'none' }}
         src={
             props.id != '0'
-                ? `https://penguinmod.com/embed/vote?id=${props.id}#dark=${props.darkmode}`
+                ? `${PM_HOME_ROOT}/embed/vote?id=${props.id}#dark=${props.darkmode}`
                 : 'about:blank'
         }
     ></iframe>

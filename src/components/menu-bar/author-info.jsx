@@ -5,6 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import UserAvatar from './user-avatar.jsx';
 
 import styles from './author-info.css';
+import {PM_HOME_ROOT} from '../../lib/pm-config';
 
 const ActualAuthorInfo = ({
     className,
@@ -31,7 +32,7 @@ const ActualAuthorInfo = ({
             </h1>
             <div>
                 <span className={styles.usernameLine}>
-                    <a style={{ color: "white" }} target="_blank" href={"https://penguinmod.com/profile?user=" + username}>
+                    <a style={{ color: "white" }} target="_blank" rel="noopener noreferrer" href={`${PM_HOME_ROOT}/profile?user=` + username}>
                         <FormattedMessage
                             defaultMessage="by {username}"
                             description="Shows that a project was created by this user"

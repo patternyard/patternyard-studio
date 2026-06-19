@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './user-avatar.css';
+import {PM_HOME_ROOT} from '../../lib/pm-config';
 
 const UserAvatar = ({
     className,
     imageUrl,
     username
 }) => (
-    <a target="_blank" href={"https://penguinmod.com/profile?user=" + username}>
+    <a target="_blank" rel="noopener noreferrer" href={`${PM_HOME_ROOT}/profile?user=` + username}>
         <img
             className={classNames(
                 className,
