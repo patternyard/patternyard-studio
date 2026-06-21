@@ -3,15 +3,15 @@
   "rewrites": [
     {
       "source": "/PenguinMod-Packager",
-      "destination": "https://penguinmod-packager.vercel.app/"
+      "destination": "https://packager.patternyard.dev/"
     },
     {
       "source": "/PenguinMod-Packager/",
-      "destination": "https://penguinmod-packager.vercel.app/"
+      "destination": "https://packager.patternyard.dev/"
     },
     {
       "source": "/PenguinMod-Packager/:path+",
-      "destination": "https://penguinmod-packager.vercel.app/:path+"
+      "destination": "https://packager.patternyard.dev/:path+"
     }
   ]
 }
