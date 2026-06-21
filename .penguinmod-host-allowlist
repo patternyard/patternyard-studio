@@ -1,25 +1,11 @@
 # Files exempt from the "no upstream hosts" CI guard.
-# gitignore-style path globs; one per line. Only tooling that intentionally
-# references the upstream host to REWRITE it, migration provenance, and human
-# documentation belong here. Application/runtime code must never be hand-added.
+# Only intentional upstream references remain: rewrite tooling (pull.js), the
+# canonical host MAP (pm-config.js), the success-criterion text (.env*), and docs.
+# All runtime/user-facing hosts were repointed to patternyard.dev on 2026-06-21.
 
-# Documentation legitimately names the upstream project and its hosts.
 **/*.md
 **/*.mdx
-
-# --- Baseline-seeded (2026-06-20) ---------------------------------------------
-# These files already carried upstream hosts from upstream engine code at
-# rollout time. Allowlisting them keeps the guard green today AND lets future
-# upstream merges into wycats-main land here without breaking CI. The guard
-# still fails on NEW host refs in any other (patternyard) file. This list
-# doubles as the known upstream-host debt inventory for this repo.
 .env
 .env.example
-.github/workflows/node.js.yml
-.vscode/settings.json
-src/addons/pull.js
 src/lib/pm-config.js
-src/playground/index.ejs
-static/privacy.html
-static/terms.html
-vercel.json
+src/addons/pull.js
